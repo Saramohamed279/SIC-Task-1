@@ -3,10 +3,22 @@
 
 int main()
 {
-    float X_EGP , X_USD;
-    printf("Please Enter The Amount Number (EG) That you want To Convert it to USD : ");
-    scanf("%f",&X_EGP);
-    X_USD = X_EGP * 0.064;
-    printf("%0.3f in EGP = %0.3f in USD " , X_EGP , X_USD);
+   int num, re=0;
+   printf("Enter The Number You want to check : ");
+   scanf("%d",&num);
+   for(int i =1 ; i<num ; i++)
+   {
+       if (num % i ==0)
+       {
+           re+=i;
+       }
+   }
+   if (re == num)
+   {
+       printf("This number is perfect");
+   }
+   else
+    printf("This number isn't perfect\n");
+
     return 0;
 }
