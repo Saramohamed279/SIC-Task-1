@@ -67,14 +67,16 @@ void search_for_books()
 	if (search_int == 1)
 	{
 		printf(" Enter the book's title :  \n ");
-		scanf("%s",search);
+		scanf("%s",&search);
 
 		for (int b = 0; b < Books_counter; b++)
 		{
-			if (search == bookks[b].Title)
+			if ( strcmp(search,bookks[b].Title ) == 0)
 			{
 				printf("Book Title : %s", bookks[b].Title);
+				printf("\n");
 				printf("Book ID : %d", bookks[b].Id);
+				printf("\n");
 				is_found = 1;
 				break;
 			}
@@ -131,7 +133,7 @@ void add_book()
 void menu(){
 
 
-            int choice;
+    int choice;
     printf("\npress 1 to registrate \npress 2 to know number of students registred in the system \npress 3 to add a book\npress 4 to show the library\npress 5 to search for a certain book\npress 6 to exit\n\nplease enter your choice : ");
     scanf("%d", &choice);
 
